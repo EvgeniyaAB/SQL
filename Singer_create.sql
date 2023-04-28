@@ -8,11 +8,10 @@ CREATE TABLE IF NOT EXISTS Singer (
 	name_singer VARCHAR(60) NOT NULL
 );
 
-CREATE TABLE IF NOT EXISTS Style_musicSinger (
+CREATE TABLE IF NOT EXISTS Style_singer (
 	id SERIAL PRIMARY KEY,
 	style_music_id INTEGER REFERENCES Style_music(id),
-	singer_id INTEGER REFERENCES Singer(id),
-	album_id INTEGER REFERENCES Album(id)
+	singer_id INTEGER REFERENCES Singer(id)
 );
 
 CREATE TABLE IF NOT EXISTS Album (
@@ -21,6 +20,11 @@ CREATE TABLE IF NOT EXISTS Album (
 	album_year date
 );
 
+CREATE TABLE IF NOT EXISTS Singer_Album(
+	id SERIAL PRIMARY KEY,
+	singer_id INTEGER REFERENCES Singer(id),
+	album_id INTEGER REFERENCES Album(id)
+);
 
 CREATE TABLE IF NOT EXISTS Track (
 	id SERIAL PRIMARY KEY,

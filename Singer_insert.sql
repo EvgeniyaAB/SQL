@@ -4,7 +4,7 @@ VALUES
 ('Рок'),
 ('Рэп'),
 ('Поп'),
-('Шансон')
+('Шансон');
 
 INSERT INTO singer (name_singer)
 VALUES
@@ -17,11 +17,13 @@ VALUES
 ('Linkin park'),
 ('Atchitects'),
 ('Asking Alexandria'),
-('Deep Purple')
+('Deep Purple');
+
+
 
 INSERT INTO album (album_name, album_year)
 VALUES
-('Баста 4', '2013-04-20'),
+('Баста 4', '2018-04-20'),
 ('Подмена понятий', '2020-10-22'),
 ('2004', '2019-12-24'),
 ('Picture book', '1985-10-01'),
@@ -30,21 +32,23 @@ VALUES
 ('Meteora', '2003-03-25'),
 ('For those that wish to exist', '2021-02-26'),
 ('Asking Alexandria', '2019-12-15'),
-('Perfect stranger', '1984-11-02')
+('Perfect stranger', '1984-11-02'),
+('New', '2020-11-02');
 
-INSERT INTO style_musicsinger (style_music_id, singer_id, album_id)
+
+INSERT INTO style_singer (style_music_id, singer_id)
 VALUES
-(1, 8, 8),
-(1, 8, 9),
-(1, 10, 10),
-(2, 5, 5),
-(2, 7, 7),
-(2, 9, 9),
-(3, 1, 1),
-(3, 3, 3),
-(3, 6, 6),
-(4, 4, 4),
-(5, 2, 2)
+(1, 8),
+(1, 10),
+(2, 5),
+(2, 7),
+(2, 9),
+(3, 1),
+(3, 3),
+(3, 6),
+(4, 4),
+(5, 2),
+(4, 1);
 
 INSERT INTO track (album_id, track_name, track_long)
 VALUES
@@ -64,8 +68,23 @@ VALUES
 (8, 'Dead butterflies', 242),
 (9, 'Fame', 198),
 (9, 'Animals', 244),
-(10, 'Under the gun', 275)
+(10, 'Under the gun', 275),
+(11, 'New song', 100);
 
+INSERT INTO singer_Album (singer_id, album_id)
+VALUES
+(8, 8),
+(8, 9),
+(10, 10),
+(5, 5),
+(7, 7),
+(9, 9),
+(1, 1),
+(3, 3),
+(6, 6),
+(4, 4),
+(2, 2),
+(10, 11);
 
 INSERT INTO collection (collection_name, collection_year)
 VALUES
@@ -76,7 +95,7 @@ VALUES
 ('Remixed Vol.1', '2021-11-05'),
 ('Газгольдер саундтрек', '2018-05-25'),
 ('One more light live', '2017-03-05'),
-('What I have done', '2007-01-01')
+('What I have done', '2007-01-01');
 
 INSERT INTO collectiontrack (track_id, collection_id)
 VALUES
@@ -88,5 +107,5 @@ VALUES
 (8, 5),
 (11, 8),
 (12, 7),
-(16, 2)
+(16, 2);
 

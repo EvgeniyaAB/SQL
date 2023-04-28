@@ -1,5 +1,5 @@
 -- Название и год выхода альбомов, вышедших в 2018 году.
-SELECT * 
+SELECT album_name, album_year  
 FROM album
 WHERE album_year BETWEEN '2018-01-01' AND '2018-12-31';
 
